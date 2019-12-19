@@ -11,7 +11,7 @@ ep0={(1,2):0.1,(2,3):0.1,(3,5):0.1,(2,4):0.1,(3,6):0.1}
 ep1={(1,2):0.9,(2,3):0.9,(3,5):0.9,(2,4):0.9,(3,6):0.9}
 a11=a10=a00=a01=[]
 x=np.zeros(7)
-LOR=np.zeros((20,6))
+LOR=[]
 asc=desc=1
 def wt(a,b,c): #weights of the messages
     if(b>a):
@@ -49,7 +49,7 @@ for trial in range(1):
     eM[5]=eM[6]=1    #clamping messages for end nodes
     for g in range(20):  
         update()
-        LOR[g]=B[1:7]
+        LOR.append(B[1:7])   #Skip 0 index
         
       
      
