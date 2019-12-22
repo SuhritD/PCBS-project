@@ -5,8 +5,8 @@ Created on Sat Nov 30 12:17:18 2019
 @author: Suhrit
 """''
 import numpy as np, matplotlib.pyplot as plt
-prob0={(1,2):0.1,(2,3):0.1,(3,5):0.1,(2,4):0.1,(3,6):0.1}
-prob1={(1,2):0.9,(2,3):0.9,(3,5):0.9,(2,4):0.9,(3,6):0.9}
+prob0={(1,2):0.1,(2,3):0.1,(3,5):0.1,(2,4):0.1,(4,6):0.1}
+prob1={(1,2):0.9,(2,3):0.9,(3,5):0.9,(2,4):0.9,(4,6):0.9}
 state=np.zeros(7)
 asc=desc=1 #Inhibition of loops 
 def wt(a,b,c): #weights of the messages
@@ -15,7 +15,7 @@ def wt(a,b,c): #weights of the messages
     elif(a>b):
         w=(prob1[b,a]*np.exp(c)+prob0[b,a])/((1-prob1[b,a])*np.exp(c)+(1-prob0[b,a]))
     return np.log(w)
-Message={(1,2):0,(2,1):0,(2,3):0,(3,2):0,(3,5):0,(5,3):0,(2,4):0,(4,2):0,(3,6):0,(6,3):0}
+Message={(1,2):0,(2,1):0,(2,3):0,(3,2):0,(3,5):0,(5,3):0,(2,4):0,(4,2):0,(4,6):0,(6,4):0}
 extMessage={1:0,5:0,6:0}
 Belief=np.zeros(7)
 def bp(i): #Summing messages from neighbours
