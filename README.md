@@ -7,19 +7,17 @@
  
  ![alt text](https://github.com/SuhritD/PCBS-project/blob/master/Capture.PNG)
  
- where the weight is a function of the probability of making an observation based on the higher node's input - 
+The message in the reverse direction is subtraced with a factor α, that can be seen as an inhibitory connection to prevent the message from being recurrent. The weight is a function of the probability of making an observation based on the higher node's input - 
  ![alt text](https://github.com/SuhritD/PCBS-project/blob/master/W.PNG) 
  
  The belief of a node is the sum of all incoming messages - 
  ![alt text](https://github.com/SuhritD/PCBS-project/blob/master/b.PNG)
  
- The message in the reverse direction is subtract in this case with a factor α, that can be seen as an inhibitory connection to prevent the message from being recurrent. 
- 
  In the case of an imbalance in exhitatory and inhibitory connections in the brain, the confidence in a certain observation can be overestimated from little information. The belief from a top down node could be reverberated as a bottom up information to boost confidence about seeing something - a circular inference. Schizophrenics show positive symptoms like hallucinations and delusions that studies have shown could be explained by [circular belief propagation](https://academic.oup.com/schizophreniabulletin/article/42/5/1124/2414016).
  
  
  I will create a simple model of a node graph with 6 nodes as shown in the figure above. I will compare the computed beliefs of sensory evidences based on whether or not the top down or bottom up connections are disrupted. All equations about belief propagation applied can be found [here]. 
- ![alt text]
+
  
  # Simulations 
  ## 
