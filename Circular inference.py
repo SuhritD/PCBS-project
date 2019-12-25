@@ -8,15 +8,17 @@ import numpy as np, matplotlib.pyplot as plt
 prob0={(1,2):0.1,(2,3):0.1,(3,5):0.1,(2,4):0.1,(4,6):0.1}
 prob1={(1,2):0.9,(2,3):0.9,(3,5):0.9,(2,4):0.9,(4,6):0.9}
 state=np.zeros(7)
-asc=desc=1 #Inhibition of loops 
 def wt(a,b,c): #weights of the messages
     if(b>a):
       w=(prob1[a,b]*np.exp(c)+prob0[a,b])/((1-prob1[a,b])*np.exp(c)+(1-prob0[a,b]))
     elif(a>b):
         w=(prob1[b,a]*np.exp(c)+prob0[b,a])/((1-prob1[b,a])*np.exp(c)+(1-prob0[b,a]))
     return np.log(w)
+    def prob(x):
+        return (1/(1+np.exp(-x)))
 Message={(1,2):0,(2,1):0,(2,3):0,(3,2):0,(3,5):0,(5,3):0,(2,4):0,(4,2):0,(4,6):0,(6,4):0}
 extMessage={1:0,5:0,6:0}
+asc=desc=1 #Inhibition of loops 
 Belief=np.zeros(7)
 def bp(i): #Summing messages from neighbours
     x=0
@@ -41,14 +43,19 @@ def update(B):
     return B
  
 Belief=np.zeros(7)
-LOR=np.zeros((20,6))
 #set clamping messages for end nodes
-extMessage[1]=-2
-extMessage[5]=extMessage[6]=1    
-for trial in range(20):
+extMessage[1]= -2
+extMessage[5]=extMessage[6]=1   
+LOR=np.zeros((20,6))
+for iter in range(20):
     update(Belief)
-    print(Belief)
-    LOR[trial]=(Belief[1:7])
+    LOR[iter]=Belief[1:7]
+for cause in range(6):
+ plt.ylim(0,1)
+ plt.xticks([0,5,10,15,20])
+ plt.xlabel('Iterations')
+ plt.ylabel('Probability of Belief')
+ plt.plot(prob(LOR.T[cause]))
         
       
      
