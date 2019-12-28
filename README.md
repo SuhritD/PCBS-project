@@ -79,5 +79,6 @@ extMessage[5]=extMessage[6]=1
 
 ![alt text](https://github.com/SuhritD/PCBS-project/blob/master/Contra%20norm.png) 
 
-The result is that the beliefs are close to half normally, but reverberting several times in the case of impaired loops. This is a representation of how bizzare beliefs or delusions appear in schizophrenics, as there is no fixed state of perception.  
+The result is that the beliefs are close to half normally, but reverberting several times in the case of impaired loops. This is a representation of how bizzare beliefs or delusions appear in schizophrenics, as there is no fixed state of perception.
+
 [here]: https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/brain/136/11/10.1093_brain_awt257/3/awt257_Supplementary_Data.zip?Expires=1578341001&Signature=y6luI7Pil3mD-OqDYChLIsVoNk4ev2r1sMzwQessujtYe2gs0AGiBhiIF~Y0zUdh7GYVKN1KrUGg7SdaFuQj3Tix46ZIqsDXCGrfNc~AP5Of3M8kcNULcwHSPt5eDcVe9z7AI8HoIflqg6dEyG3dNOvK658O1HsUx-zUmt0ZR~ltqJuhK1eGOfJhzqv-agYcZFmt4Mt8ECe8rwxGBiwrC-kz6LpYJ3NzaejK1H5mo9e-fqmEmWMIVdnmuphqFvU~ey-59TAuzAjUyX3ayXHbooo8WhEpvoc2zWUYf9Dri5J296xG6T~hGXz2JdDYfHvFC-3dGiTM5mn7pmzdDhhFfA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
