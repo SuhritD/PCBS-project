@@ -22,7 +22,7 @@ The message in the reverse direction is subtraced with a factor α, that can be 
  # Simulations 
  Let us consider the conditional probabilities of the nodes being linked as 0.9 upon presence and 0.1 upon absence (the probability of j being present when i is present is 0.9 and 0.1 when i is absent). The sensory evidence coming to nodes 5 and 6 are constant clamping messages, and an external message to node 1 is used to represent prior beliefs. The beliefs are represented as Log Odds Ratio (LOR), or the log of probability of a cause being present divided by the probability of a cause being absent.     
  ## Normal Belief Propagation 
- During normal inference, the ascending and descending inhibitory connections are complete (α=1), whereas circular inference has impaired connections (α=0.1). If there is only sensory information, the external message of nodes 5 and 6 are set.
+ During normal inference, the ascending and descending inhibitory connections are complete (α=1), whereas circular inference has impaired connections (α=0.1). If there is only sensory information, the external message of nodes 5 and 6 are set as they are the bottom up nodes.
  ```python
  extMessage={1:0,5:0,6:0}
  asc=desc=1
@@ -79,6 +79,9 @@ extMessage[5]=extMessage[6]=1
 
 ![alt text](https://github.com/SuhritD/PCBS-project/blob/master/Contra%20norm.png) 
 
-The result is that the beliefs are close to half normally, but reverberting several times in the case of impaired loops. This is a representation of how bizzare beliefs or delusions appear in schizophrenics, as there is no fixed state of perception.
+The result is that the beliefs are close to half normally, but reverberting several times in the case of impaired loops. This is a representation of how bizzare beliefs or delusions appear in schizophrenics, as there is no fixed state of perception. 
+ These simulations show how circular inference can be simulated using the belief propagation algorithm to represent the neural mechanisms of symptoms exhibited by schizophrenia. There are other cases that can be examined, such as only impaired ascending or descending loops, varying the conditional probabilities and different range of messages. 
+ 
+ Before this semester, I had taken computer science in high school and learnt C++. From this class along with the self-work programming course, I have learnt all my Python skills - loops, tuples, dictionaries, dataframes and lambda functions. I think that this course was very useful if complemented with the other course for learning a new language, but it is possible that my previous experience in coding made me feel at ease. 
 
 [here]: https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/brain/136/11/10.1093_brain_awt257/3/awt257_Supplementary_Data.zip?Expires=1578341001&Signature=y6luI7Pil3mD-OqDYChLIsVoNk4ev2r1sMzwQessujtYe2gs0AGiBhiIF~Y0zUdh7GYVKN1KrUGg7SdaFuQj3Tix46ZIqsDXCGrfNc~AP5Of3M8kcNULcwHSPt5eDcVe9z7AI8HoIflqg6dEyG3dNOvK658O1HsUx-zUmt0ZR~ltqJuhK1eGOfJhzqv-agYcZFmt4Mt8ECe8rwxGBiwrC-kz6LpYJ3NzaejK1H5mo9e-fqmEmWMIVdnmuphqFvU~ey-59TAuzAjUyX3ayXHbooo8WhEpvoc2zWUYf9Dri5J296xG6T~hGXz2JdDYfHvFC-3dGiTM5mn7pmzdDhhFfA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
